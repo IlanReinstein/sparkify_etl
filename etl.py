@@ -63,6 +63,7 @@ def process_log_file(cur, filepath: str) -> None:
         cur.execute(song_select, (row.song, row.artist, row.length))
         results = cur.fetchone()
 
+        # Handle NULL's for artist and song IDs
         if results:
             songid, artistid = results
         else:
