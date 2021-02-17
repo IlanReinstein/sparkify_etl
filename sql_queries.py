@@ -7,7 +7,7 @@ artist_table_drop = "DROP TABLE IF EXISTS artists"
 time_table_drop = "DROP TABLE IF EXISTS time"
 
 # CREATE TABLES
-
+# Song ID and Artist ID NULL entries are handled in etl.py
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays \
 (songplay_id SERIAL PRIMARY KEY, start_time VARCHAR NOT NULL, user_id VARCHAR NOT NULL, level VARCHAR, \
 song_id VARCHAR, artist_id VARCHAR, session_id BIGINT, location VARCHAR, user_agent VARCHAR)
