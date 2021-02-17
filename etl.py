@@ -27,9 +27,9 @@ def process_song_file(cur, filepath: str) -> None:
 def process_log_file(cur, filepath: str) -> None:
     """
     Function to process each log file separately.
-    
+
     ToDo: Add COPY statement functionality and tests of data.
-    
+
     """
     # open log file
     df = pd.read_json(filepath, lines=True)
